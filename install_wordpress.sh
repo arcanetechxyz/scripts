@@ -1,4 +1,7 @@
-# https://www.arcanetech.xyz/scripts/install_wordpress.sh
+#!/bin/sh
+# Download and prepare latest WordPress for installation
+
+command -v curl >/dev/null 2>&1 || { echo >&2 "curl is not installed. Aborting."; exit 1; }
 
 echo "Downloading WordPress..."
 curl -Os https://wordpress.org/latest.tar.gz
